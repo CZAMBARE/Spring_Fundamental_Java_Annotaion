@@ -1,10 +1,12 @@
 package com.spring.repository;
 
 import com.spring.model.Speaker;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository("speakerRepository")
 public class HibernetSpeakerRepositoryImpl implements SpeakerRepository {
 
     @Override

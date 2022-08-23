@@ -8,6 +8,7 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("speakerService")
@@ -23,6 +24,11 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
     public SpeakerServiceImpl(){
         System.out.println("Spreaker ServiceImpl no args constuctors");
+    }
+
+    @PostConstruct
+    private void initialize(){
+        System.out.println("We are called after the constructors");
     }
 
     @Override
